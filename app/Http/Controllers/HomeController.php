@@ -35,6 +35,7 @@ class HomeController extends Controller
 
     public function main_save(Request $request) {
         $item = Main::where('name', $request->get('name'))->first();
+        $item->link = $request->get('link');
         if($request->hasFile("image") && $request->file('image') != null){
             $picture = request()->file('image');
             $imageName = time().'.'.$picture->getClientOriginalExtension();

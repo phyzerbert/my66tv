@@ -12,17 +12,15 @@
                     <img src="{{asset($top->image)}}" alt="" width="100%" />                    
                 </div>
                 <div class="card-footer">
-                    <form action="{{route('main.save')}}" method="post" class="clearfix" enctype="multipart/form-data">
+                    <form action="{{route('main.save')}}" method="post" class="clearfix form-inline" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="name" value="top" />
-                        <div class="custom-file float-left" style="width:80%;">
+                        <div class="custom-file" style="width:40%;">
                             <input type="file" class="custom-file-input" name="image" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
-                        <button type="submit" class="btn btn-primary float-right">Save</button>
-                        <div class="row">
-                            <div class="col-10"></div>
-                        </div>
+                        <input type="text" class="form-control ml-2" name="link" value="{{$top->link}}" style="width: 40%;" />    
+                        <button type="submit" class="btn btn-primary ml-3">Save</button>
                     </form>
                 </div>
             </div>
@@ -35,17 +33,15 @@
                     <img src="{{asset($middle->image)}}" alt="" width="100%" />
                 </div>
                 <div class="card-footer">
-                    <form action="{{route('main.save')}}" method="post" class="clearfix" enctype="multipart/form-data">
+                    <form action="{{route('main.save')}}" method="post" class="clearfix form-inline" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="name" value="middle" />
-                        <div class="custom-file float-left" style="width:80%;">
+                        <div class="custom-file" style="width:40%;">
                             <input type="file" class="custom-file-input" name="image" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
-                        <button type="submit" class="btn btn-primary float-right">Save</button>
-                        <div class="row">
-                            <div class="col-10"></div>
-                        </div>
+                        <input type="text" class="form-control ml-2" name="link" value="{{$middle->link}}" style="width: 40%;" />    
+                        <button type="submit" class="btn btn-primary ml-3">Save</button>
                     </form>
                 </div>
             </div>
@@ -58,17 +54,15 @@
                     <img src="{{asset($bottom->image)}}" alt="" width="100%" />
                 </div>
                 <div class="card-footer">
-                    <form action="{{route('main.save')}}" method="post" class="clearfix" enctype="multipart/form-data">
+                    <form action="{{route('main.save')}}" method="post" class="clearfix form-inline" enctype="multipart/form-data">
                         @csrf
                         <input type="hidden" name="name" value="bottom" />
-                        <div class="custom-file float-left" style="width:80%;">
+                        <div class="custom-file" style="width:40%;">
                             <input type="file" class="custom-file-input" name="image" id="customFile">
                             <label class="custom-file-label" for="customFile">Choose file</label>
                         </div>
-                        <button type="submit" class="btn btn-primary float-right">Save</button>
-                        <div class="row">
-                            <div class="col-10"></div>
-                        </div>
+                        <input type="text" class="form-control ml-2" name="link" value="{{$bottom->link}}" style="width: 40%;" />    
+                        <button type="submit" class="btn btn-primary ml-3">Save</button>
                     </form>
                 </div>
             </div>
