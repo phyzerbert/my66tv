@@ -32,15 +32,18 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('main.index')}}">Main</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('sub_page.index')}}">Sub Url</a>
-                        </li>
-                    </ul>
+                    @auth                        
+                        @if (Auth::user()->role == 'admin')                        
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('main.index')}}">Main</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('sub_page.index')}}">Sub Url</a>
+                                </li>
+                            </ul>
+                        @endif
+                    @endauth
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
