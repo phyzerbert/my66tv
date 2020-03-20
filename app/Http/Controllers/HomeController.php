@@ -42,9 +42,8 @@ class HomeController extends Controller
             $picture->move(public_path('images/main/'), $imageName);
             $image_url = 'images/main/'.$imageName;
             $item->image = $image_url;
-            $item->save();
         }
-
+        $item->save();
         return back()->with('success', 'Updated Successfully');
     }
 
