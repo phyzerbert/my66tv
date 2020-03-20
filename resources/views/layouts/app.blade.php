@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    @yield('style')
 </head>
 <body class="bg-dark">
     <div id="app">
