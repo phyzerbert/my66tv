@@ -15,7 +15,7 @@
             @php
                 $middle = \App\Main::where('name', 'middle')->first();
             @endphp
-            <a href="{{$top->link}}">
+            <a href="{{$middle->link}}">
                 <img src="{{asset($middle->image)}}" alt="" width="100%" />
             </a>
         </div>
@@ -23,7 +23,7 @@
             @php
                 $bottom = \App\Main::where('name', 'bottom')->first();
             @endphp
-            <a href="{{$top->link}}">
+            <a href="{{$bottom->link}}">
                 <img src="{{asset($bottom->image)}}" alt="" width="100%" />
             </a>
         </div>
